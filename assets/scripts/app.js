@@ -57,7 +57,7 @@ const Portfolio = function() {
 	function typeAnimation() {
 		Typed.new("#writing-text", {
 			strings: [
-				"am a Full-Stack Web Developer.", "love making a real difference.", "understand your business needs.", "teach people how to use software tools.", "solve problems."
+				"save you time.", "love making a real difference.", "understand your business needs.", "solve problems."
 			],
 			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 			stringsElement: null,
@@ -72,6 +72,10 @@ const Portfolio = function() {
 		});
 	}
 
+	function setYear(){
+		$("#current_year").innerHTML = new Date().getFullYear;
+	}
+
 	return {
 		displayWordCloud: displayWordCloud,
 		typeAnimation: typeAnimation
@@ -82,3 +86,4 @@ const Portfolio = function() {
 
 Portfolio.displayWordCloud();
 Portfolio.typeAnimation();
+Portfolio.setYear();
